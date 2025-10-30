@@ -14,3 +14,9 @@ def raiz():
 def Listar_Jogos():
     return db_Jogos
 
+@app.get("/jogos/{nome_Jogo}")
+def Listar_jogo(nome_Jogo):
+    for jogo in db_Jogos:
+        if nome_Jogo == jogo["nome"]:
+            return jogo
+    raise HTTPException(status_code=404, detail="Jogo não encontrado")
