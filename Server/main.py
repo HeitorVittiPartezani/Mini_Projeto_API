@@ -10,3 +10,7 @@ def raiz():
 }
     return dictraiz
 
+@app.get("/jogos")
+def Listar_Jogos():
+    return db_Jogos
+
