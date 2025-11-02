@@ -4,7 +4,7 @@ from pydantic import BaseModel
 from typing import Optional
 
 class Jogo(BaseModel):
-    id: Optional[int]
+    id: Optional[int] = None
     nome: str
     criador_empresa: str
     descricao:str
